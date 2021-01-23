@@ -8,7 +8,7 @@ var boy;
 var ground;
 var rock1;
 var tree;
-var mango1, mango2, mango3, mango4, mango5, mango6, mango7;
+var mango1, mango2, mango3, mango4, mango5, mango6, mango7, mango8, mango9, mango10;
 var chain;
 
 function preload(){
@@ -31,7 +31,12 @@ function setup(){
 	mango3 = new mango(1000,100,7);
 	mango4 = new mango(950,60,9);
 	mango5 = new mango(1050,60,6);
-	mango6 = new mango(1100,120,10);
+	mango6 = new mango(1100,120,8);
+	mango7 = new mango(1142,115,9);
+	mango8 = new mango(982,28,7);
+	mango9 = new mango(1040,116,6);
+	mango10 = new mango(839,103,10);
+
 	ground = Bodies.rectangle(640,385,1290,20,{isStatic:true});
 	World.add(world,ground);
 	Engine.run(engine);
@@ -66,12 +71,20 @@ function draw() {
 	mango4.display();
 	mango5.display();
 	mango6.display();
+	mango7.display();
+	mango8.display();
+	mango9.display();
+	mango10.display();
 	collision(rock1,mango1);
 	collision(rock1,mango2);
 	collision(rock1,mango3);
 	collision(rock1,mango4);
 	collision(rock1,mango5);
 	collision(rock1,mango6);
+	collision(rock1,mango7);
+	collision(rock1,mango8);
+	collision(rock1,mango9);
+	collision(rock1,mango10);
 
 	
 	
